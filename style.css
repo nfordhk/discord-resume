@@ -1,0 +1,254 @@
+/* General Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f0f10, #1a1a2e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    width: 1300px;
+    height: 700px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(88, 101, 242, 0.2);
+  }
+  
+  /* Left Sidebar */
+  .sidebar {
+    background-color: #202225;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {
+    color: #b9bbbe;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px;
+    margin-bottom: 6px;
+    color: #b9bbbe;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .sidebar li:hover {
+    background-color: #5865f2;
+    color: #ffffff;
+  }
+  
+  .sidebar li.active {
+    background-color: #5865f2;
+    color: white;
+  }
+  
+  .user-card {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #292b2f;
+    border-top: 1px solid #1e1f22;
+    gap: 10px;
+  }
+  
+  .user-card img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .status {
+    color: #43b581;
+  }
+  
+  /* Main Content Panel */
+  .main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3136;
+  }
+  
+  /* Channel Header */
+  .channel-header {
+    height: 48px;
+    background-color: #2b2d31;
+    border-bottom: 1px solid #1e1f22;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Chat Content Area */
+  .content {
+    flex-grow: 1;
+    padding: 30px 30px 30px 60px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #2f3136;
+  }
+  
+  .section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .section.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+  }
+  
+  .section:not(.active) {
+    display: none;
+  }
+  
+  .messages-wrapper {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 0;
+  }
+  
+  /* Message Bubbles */
+  .message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .message-body {
+    max-width: 100%;
+  }
+  
+  .message-header {
+    font-size: 14px;
+    color: #b9bbbe;
+    margin-bottom: 4px;
+  }
+  
+  .message-header .username {
+    font-weight: bold;
+    color: #fff;
+    margin-right: 8px;
+  }
+  
+  .timestamp {
+    font-size: 12px;
+    color: #72767d;
+  }
+  
+  .message-content {
+    font-size: 14px;
+    color: #dcddde;
+    line-height: 1.4;
+  }
+  
+  /* Right Sidebar */
+  .right-sidebar {
+    width: 250px;
+    background-color: #2b2d31;
+    padding: 16px;
+    color: #dcddde;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #1e1f22;
+  }
+  
+  .search-box input {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #1e1f22;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-section h4 {
+    font-size: 12px;
+    color: #b9bbbe;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .activity,
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .activity img,
+  .user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-list .user {
+    margin-bottom: 8px;
+  }
+  
+  .user span {
+    font-size: 14px;
+    color: #fff;
+  }
+  
